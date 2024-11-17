@@ -1,0 +1,244 @@
+body{
+    background-color: #171717;
+    padding: 0px;
+    height: 0px;
+}
+
+header {
+    width: 200px;
+    height: 200px;
+}
+
+.logo-sig{
+    width: 250px;
+    height: 100px;
+    display: grid;
+    place-content: center;
+}
+
+.logo-sig img{
+    width: 250px;
+    height: 230px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 85px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 20px;
+}
+
+a {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+}
+
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after {
+    scale: 1 1;
+}
+
+.front-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 40%;
+    text-align: right;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #FEB9A3;
+}
+
+h2 {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #F86594;
+}
+
+.education {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.education h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.footer {
+    background-color: #050A30;
+    color: #f2f2f2;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+}
+
+  .footer-content p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: #ff66b2;
+    text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 15px #ff66b2;
+}
+
+@media only screen and (max-width: 600px){
+    nav{
+      width: 350px;
+      gap: 0.5px;
+      justify-content: center;
+      margin-top: 80px;
+      align-items: center;
+      max-height: 0;
+  }
+
+    nav a{
+      font-size: 16px;
+      margin-top: 75px;
+    }
+
+    .front-page{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+
+    }
+
+    .content h1{
+        margin-left: 0;
+        font-size: 30px;
+        display: flex;
+    }
+
+    .content h2{
+        margin-left: 0;
+        font-size: 20px;
+        display: flex;
+        line-height: normal;
+        width: 100%;
+    }
+
+    .image-container{
+        margin-right: 20px;
+    }
+
+    .image-container img{
+        margin-right: 5px;
+    }
+
+    .education {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+    
+    .education h3 {
+        font-size: 1.2em; /* Adjust font size */
+    }
+    
+    table, th, td {
+        display: block; /* Make table elements block-level */
+        width: 100%; /* Ensure full width */
+    }
+    
+    th, td {
+        text-align: right; /* Align text to the right */
+        padding: 8px;
+        position: relative;
+        color: black;
+    }
+
+    th::before {
+        content: attr(data-label); /* Display the table header as a label */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 8px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2; /* Change background color for better readability */
+    }
+
+    tr:nth-child(even) {
+        background-color: transparent;
+    }
+}

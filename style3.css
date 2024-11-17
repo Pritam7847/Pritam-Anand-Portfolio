@@ -1,0 +1,150 @@
+body{
+    background-color: #171717;
+    padding: 0px;
+    height: 0px;
+}
+
+header {
+    width: 200px;
+    height: 200px;
+}
+
+.logo-sig{
+    width: 250px;
+    height: 100px;
+    display: grid;
+    place-content: center;
+}
+
+.logo-sig img{
+    width: 250px;
+    height: 230px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 85px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 20px;
+}
+
+a {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+}
+
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after {
+    scale: 1 1;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.19);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Add 3D hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Card title styling */
+.card h1 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Card text styling */
+.card h2 {
+    font-size: 1.9em;
+    color: #003049;
+}
+
+.card-container{
+    display: flex;
+    gap: 55px;
+}
+
+
+
+.footer {
+    background-color: #050A30;
+    color: #f2f2f2;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 19%;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: #ff66b2;
+    text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 15px #ff66b2;
+}
+
+@media only screen and (max-width: 600px){
+    nav{
+      width: 350px;
+      gap: 0.5px;
+      justify-content: center;
+      margin-top: 80px;
+      align-items: center;
+      max-height: 0;
+  }
+
+    nav a{
+      font-size: 16px;
+      margin-top: 75px;
+    }
+
+    .card-container{
+        display: inline;
+    }
+
+    .card{
+        margin-top: 20px;
+    }
+}
